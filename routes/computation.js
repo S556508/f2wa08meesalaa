@@ -12,24 +12,24 @@ router.get('/', function(req, res, next) {
 
   var value2 = Math.random() *20;
 
-  var imul = Math.imul(value);
+  var imu = Math.imul(value);
 
-  var log = Math.log(value1);
+  var logg = Math.log(value1);
 
-  var log10 = Math.log10(value2);
+  var logg_10 = Math.log10(value2);
 
-  res.render('compute', { title: 'Meesala AdiLakshmi', 
+  res.render('computation', { title: 'Meesala AdiLakshmi', 
   value:value,
 
   value1:value1,
 
   value2:value2,
 
-  imul:imul,
+  imu:imu,
 
-  log10:log10,
+  logg:logg,
 
-  asinh:asinh
+  logg_10:logg_10,
 
 });
 
