@@ -1,19 +1,39 @@
 var express = require('express');
+
 var router = express.Router();
-var value;
 
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
-    fake_url = "https://fake.com/path" + req.url
-    const url = new URL(fake_url)
-    const search_params = url.searchParams
-    value=Number(search_params.get("x"))
-    if(value==0)
-    value=Math.random()
-    res.write("computing the values of Math.imul,math.log and math.log10. "+"\n")
-    res.write('Math.imul is applied to '+value+" is " +Math.imul(value)+"\n");
-    res.write('Math.log is applied to '+value+" is " +Math.log(value)+"\n");
-    res.write('Math.log10 is applied to '+value+" is " +Math.log10(value));
+
+  var value = Math.random() *20;
+
+  var value1 = Math.random() *20;
+
+  var value2 = Math.random() *20;
+
+  var imul = Math.imul(value);
+
+  var log = Math.log(value1);
+
+  var log10 = Math.log10(value2);
+
+  res.render('compute', { title: 'Meesala AdiLakshmi', 
+  value:value,
+
+  value1:value1,
+
+  value2:value2,
+
+  imul:imul,
+
+  log10:log10,
+
+  asinh:asinh
+
 });
+
+});
+
 
 module.exports = router;
