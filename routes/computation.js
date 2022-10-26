@@ -6,11 +6,11 @@ var router = express.Router();
 
 router.get('/', function(req, res, next) {
 
-  var value = Math.random() *20;
+  var value = Math.floor(Math.random() *20)
 
-  var value1 = Math.random() *20;
+  var value1 = Math.floor(Math.random() *20)
 
-  var value2 = Math.random() *20;
+  var value2 = Math.floor(Math.random() *20)
 
   var imu = Math.imul(value);
 
